@@ -7,19 +7,7 @@ import Videos from "./Videos";
 import axios from "axios";
 
 // const options = {
-//   method: 'GET',
-//   url: 'https://youtube-v31.p.rapidapi.com/search',
-//   params: {
-//     relatedToVideoId: '7ghhRHRP6t4',
-//     part: 'id,snippet',
-//     type: 'video',
-//     maxResults: '50',
-//   },
-//   headers: {
-//     'X-RapidAPI-Key': '0c83f0fe66msh5fcb17bf4bf7426p15df18jsne6804795da2d',
-//     'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-//   }
-// };
+
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -32,14 +20,7 @@ const Feed = () => {
       .then((data) => setVideos(data.items ))
       // console.log(videos);
     }, [selectedCategory]);
-  // useEffect(()=>{
-  //   axios.request(options).then(function (response) {
-  //     // console.log(response.data.items);
-  //     setVideos(response.data.items)
-  //   }).catch(function (error) {
-  //     console.error(error);
-  //   });
-  // },[selectedCategory])
+
    
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -47,7 +28,7 @@ const Feed = () => {
       <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       
       <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-        Copyright © 2022 JiGODJi Media
+        Copyright © 2022 Hoesmad
       </Typography>
     </Box>
 
